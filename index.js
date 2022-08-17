@@ -1,16 +1,17 @@
 // Listening to click events
+const actionOnClick = (e) => makeSound(e.target.innerHTML);
+
 document.querySelectorAll('.drum').forEach( elem => {
 	elem.addEventListener("click", actionOnClick);
 })
 
-const actionOnClick = (e) => makeSound(e.target.innerHTML);
-
 // Listeneing to keyboard events
+const actionOnKeypress = (e) => makeSound(e.key);
+
 document.addEventListener(
 	"keydown", actionOnKeypress
 );
 
-const actionOnKeypress = (e) => makeSound(e.key);
 
 
 const addStyle = (key) => {
